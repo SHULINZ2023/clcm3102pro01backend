@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const mysql = require('mysql2/promise');
+const fs = require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Global middleware to log all requests
@@ -83,6 +84,7 @@ app.get('/GetFitnessRoutines', (req, res) => {
           user: 'shulinz',
           password: 'root2023.yyc',
           database: 'MyTest',
+          ssl: {ca: fs.readFileSync("./DigiCertGlobalRootCA.crt.pem")}
       });
     
       try {
