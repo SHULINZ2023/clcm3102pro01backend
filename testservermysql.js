@@ -25,9 +25,9 @@ app.post('/insertRating',(req,res)=>
     console.log(`insert feed with ${routine_id}`);
 async function insertRating() {
   const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: 'zsl@Calgary23',
+      host: 'myfirstmysqlazureshulin.mysql.database.azure.com',
+      user: 'shulinz',
+      password: 'root2023.yyc',
       database: 'MyTest',
   });
 
@@ -51,9 +51,9 @@ app.get('/GetRating', (req, res) => {
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 async function getRating() {
   const connection = await mysql.createConnection({
-      host: '127.0.0.1',
-      user: 'root',
-      password: 'zsl@Calgary23',
+      host: 'myfirstmysqlazureshulin.mysql.database.azure.com',
+      user: 'shulinz',
+      password: 'root2023.yyc',
       database: 'MyTest',
   });
 
@@ -79,9 +79,9 @@ app.get('/GetFitnessRoutines', (req, res) => {
     console.log("GetFitnessRoutines");
     async function getFitnessRoutines() {
       const connection = await mysql.createConnection({
-          host: '127.0.0.1',
-          user: 'root',
-          password: 'zsl@Calgary23',
+          host: 'myfirstmysqlazureshulin.mysql.database.azure.com',
+          user: 'shulinz',
+          password: 'root2023.yyc',
           database: 'MyTest',
       });
     
